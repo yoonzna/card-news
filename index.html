@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>한국 유학생 장학금 안내 카드뉴스</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css" />
+    <style>
+        body {
+            font-family: 'Pretendard', sans-serif;
+            background-color: #f0f2f5;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 40px 0;
+            margin: 0;
+        }
+        /* Instagram 4:5 Aspect Ratio (1080x1350) */
+        .card {
+            width: 400px;
+            height: 500px;
+            margin-bottom: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            position: relative;
+            overflow: hidden;
+            flex-shrink: 0;
+            display: flex;
+            flex-direction: column;
+            padding: 40px;
+        }
+        .bg-deep-blue { background-color: #1A365D; color: #F9FAFB; }
+        .bg-sky-blue { background-color: #63B3ED; color: #1A365D; }
+        .bg-soft-white { background-color: #F9FAFB; color: #1A365D; }
+        .bg-bright-light { background: linear-gradient(135deg, #ffffff 0%, #e0f2fe 100%); color: #1A365D; }
+        
+        /* Logo Style - Half Size Update */
+        .logo-overlay {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            height: 12px; /* 기존 24px에서 12px로 축소 */
+            width: auto;
+            z-index: 10;
+            object-fit: contain;
+            filter: drop-shadow(0 1px 2px rgba(0,0,0,0.05));
+        }
+
+        /* 3D Floating Effect */
+        .floating {
+            animation: float 3s ease-in-out infinite;
+        }
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+            100% { transform: translateY(0px); }
+        }
+
+        .line-accent {
+            width: 60px;
+            height: 4px;
+            background-color: #63B3ED;
+            margin-top: 16px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card bg-bright-light justify-center items-center text-center">
+        <img src="https://www.saraminimage.co.kr/pds/help_desk/live/2026/01/t8hezd81_8pn2-2so1qs_20260107155001.png" alt="KoMate Logo" class="logo-overlay">
+        <div class="mb-8 floating">
+            <svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" style="stop-color:#3182ce;stop-opacity:1" />
+                        <stop offset="100%" style="stop-color:#1A365D;stop-opacity:1" />
+                    </linearGradient>
+                    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+                        <feGaussianBlur in="SourceAlpha" stdDeviation="3" />
+                        <feOffset dx="4" dy="6" result="offsetblur" />
+                        <feComponentTransfer><feFuncA type="linear" slope="0.3"/></feComponentTransfer>
+                        <feMerge> 
+                            <feMergeNode />
+                            <feMergeNode in="SourceGraphic" /> 
+                        </feMerge>
+                    </filter>
+                </defs>
+                <path d="M60 25L105 45L60 65L15 45L60 25Z" fill="url(#grad1)" filter="url(#shadow)"/>
+                <path d="M105 45V70C105 70 85 85 60 85C35 85 15 70 15 70V45" stroke="#1A365D" stroke-width="2" fill="#2B6CB0" opacity="0.8"/>
+                <path d="M60 65V95" stroke="#63B3ED" stroke-width="4" stroke-linecap="round"/>
+                <circle cx="60" cy="98" r="6" fill="#63B3ED" filter="url(#shadow)"/>
+            </svg>
+        </div>
+        <div class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs font-bold mb-3 tracking-widest uppercase">Scholarship Guide</div>
+        <h1 class="text-3xl font-extrabold leading-tight">2025 한국 유학생<br><span class="text-blue-600">장학금 TOTAL 가이드</span></h1>
+        <p class="mt-4 text-gray-500 text-base">유학생이 직접 정리한 핵심 정보 모음</p>
+        <div class="line-accent mx-auto"></div>
+    </div>
+
+    <div class="card bg-deep-blue">
+        <img src="https://www.saraminimage.co.kr/pds/help_desk/live/2026/01/t8hezd81_8pn2-2so1qs_20260107155001.png" alt="KoMate Logo" class="logo-overlay">
+        <span class="text-sky-400 font-bold tracking-widest text-sm mb-4 uppercase">Background</span>
+        <h2 class="text-2xl font-bold leading-snug mb-6">학비 고민은 이제 그만,<br>나에게 맞는 장학금은?</h2>
+        <div class="space-y-4 text-blue-100 leading-relaxed opacity-90">
+            <p>한국 대학들은 글로벌 경쟁력을 위해 <span class="text-sky-300 font-semibold underline decoration-sky-500">다양한 국적의 유학생 유치</span>에 적극적입니다.</p>
+            <p>이러한 흐름 속에서 유학생들을 위한 장학금 기회는 그 어느 때보다 열려 있습니다.</p>
+        </div>
+        <div class="absolute -bottom-10 -right-10 w-40 h-40 bg-blue-700 rounded-full opacity-20"></div>
+    </div>
+
+    <div class="card bg-sky-blue">
+        <img src="https://www.saraminimage.co.kr/pds/help_desk/live/2026/01/t8hezd81_8pn2-2so1qs_20260107155001.png" alt="KoMate Logo" class="logo-overlay">
+        <h2 class="text-2xl font-extrabold mb-8 flex items-center">
+            <span class="bg-blue-900 text-white p-1 rounded mr-2">🌍</span> GKS 정부 장학금
+        </h2>
+        <div class="bg-white rounded-2xl p-6 shadow-sm border-b-4 border-blue-400">
+            <h3 class="font-bold text-blue-900 mb-4 text-lg">주요 혜택 안내</h3>
+            <ul class="space-y-3">
+                <li class="flex items-start">
+                    <span class="text-blue-600 mr-2 font-bold">01.</span> 등록금 전액 면제
+                </li>
+                <li class="flex items-start">
+                    <span class="text-blue-600 mr-2 font-bold">02.</span> 매월 풍부한 생활비 지급
+                </li>
+                <li class="flex items-start">
+                    <span class="text-blue-600 mr-2 font-bold">03.</span> 한국어 연수 및 항공권 지원
+                </li>
+            </ul>
+        </div>
+        <p class="mt-6 text-sm font-semibold text-blue-900 text-center">경제적 부담 없이 학업에만 집중하세요!</p>
+    </div>
+
+    <div class="card bg-soft-white">
+        <img src="https://www.saraminimage.co.kr/pds/help_desk/live/2026/01/t8hezd81_8pn2-2so1qs_20260107155001.png" alt="KoMate Logo" class="logo-overlay">
+        <h2 class="text-2xl font-bold mb-8 text-blue-900">어떻게 지원하나요?<br><span class="text-blue-500">GKS 지원 트랙 2가지</span></h2>
+        <div class="space-y-4">
+            <div class="p-4 bg-white border-l-8 border-blue-900 rounded-r-xl shadow-sm">
+                <h3 class="font-bold text-lg mb-1 text-blue-900">대사관 트랙 (Embassy)</h3>
+                <p class="text-sm text-gray-500">자국 내 대사관을 통해 지원, 선택 가능 대학이 많음</p>
+            </div>
+            <div class="p-4 bg-white border-l-8 border-sky-400 rounded-r-xl shadow-sm">
+                <h3 class="font-bold text-lg mb-1 text-blue-900">대학 트랙 (University)</h3>
+                <p class="text-sm text-gray-500">희망 대학에 직접 지원, 상대적으로 빠른 전형</p>
+            </div>
+        </div>
+        <div class="mt-auto bg-gray-100 p-4 rounded-xl text-xs text-center font-bold text-gray-400 uppercase">
+            Check your region's schedule!
+        </div>
+    </div>
+
+    <div class="card bg-deep-blue">
+        <img src="https://www.saraminimage.co.kr/pds/help_desk/live/2026/01/t8hezd81_8pn2-2so1qs_20260107155001.png" alt="KoMate Logo" class="logo-overlay">
+        <h2 class="text-2xl font-bold mb-6 text-white">대학별 자체 장학금</h2>
+        <p class="text-sm text-blue-200 mb-6">성적 우수자부터 TOPIK 고득점자까지</p>
+        
+        <div class="grid grid-cols-1 gap-4">
+            <div class="p-4 bg-blue-800/50 border border-blue-700 rounded-xl">
+                <h4 class="font-bold text-sky-300">고려대학교</h4>
+                <p class="text-xs text-blue-100">Global Leader / Excellence 등 등록금 최대 100%</p>
+            </div>
+            <div class="p-4 bg-blue-800/50 border border-blue-700 rounded-xl">
+                <h4 class="font-bold text-sky-300">연세대학교</h4>
+                <p class="text-xs text-blue-100">Companion Scholarship (석·박사 정액 지원)</p>
+            </div>
+            <div class="p-4 bg-blue-800/50 border border-blue-700 rounded-xl">
+                <h4 class="font-bold text-sky-300">기업 및 재단</h4>
+                <p class="text-xs text-blue-100">대웅제단 / 한세YES24 등 민간 장학 기회</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="card bg-sky-blue items-center text-center justify-center">
+        <img src="https://www.saraminimage.co.kr/pds/help_desk/live/2026/01/t8hezd81_8pn2-2so1qs_20260107155001.png" alt="KoMate Logo" class="logo-overlay">
+        <div class="text-white bg-blue-900 px-4 py-1 rounded-full text-xs font-bold mb-4">FOR SUCCESS</div>
+        <h2 class="text-2xl font-extrabold mb-6">합격률을 높이는<br>핵심 전략 3가지</h2>
+        <div class="bg-white/40 backdrop-blur-sm p-6 rounded-3xl border border-white">
+            <ul class="text-left space-y-3 font-bold text-blue-900">
+                <li class="flex items-center"><span class="mr-2">🚀</span> 대학 인재상 맞춤 전략</li>
+                <li class="flex items-center"><span class="mr-2">📝</span> 구체적이고 실현 가능한 계획</li>
+                <li class="flex items-center"><span class="mr-2">🤝</span> 본인만의 독특한 강점 강조</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="card bg-soft-white">
+        <img src="https://www.saraminimage.co.kr/pds/help_desk/live/2026/01/t8hezd81_8pn2-2so1qs_20260107155001.png" alt="KoMate Logo" class="logo-overlay">
+        <h2 class="text-2xl font-bold mb-8 flex items-center text-blue-900">
+            <span class="bg-blue-100 p-2 rounded-lg mr-3">📋</span> 필수 서류 체크리스트
+        </h2>
+        <div class="space-y-4">
+            <label class="flex items-center p-3 bg-white rounded-xl shadow-sm cursor-pointer border border-transparent hover:border-blue-200 transition-all">
+                <input type="checkbox" class="w-5 h-5 accent-blue-900 mr-4">
+                <span class="font-semibold text-gray-700 text-sm">최종 학위 졸업/성적 증명서</span>
+            </label>
+            <label class="flex items-center p-3 bg-white rounded-xl shadow-sm cursor-pointer border border-transparent hover:border-blue-200 transition-all">
+                <input type="checkbox" class="w-5 h-5 accent-blue-900 mr-4">
+                <span class="font-semibold text-gray-700 text-sm">공인 어학 성적표 (TOPIK 등)</span>
+            </label>
+            <label class="flex items-center p-3 bg-white rounded-xl shadow-sm cursor-pointer border border-transparent hover:border-blue-200 transition-all">
+                <input type="checkbox" class="w-5 h-5 accent-blue-900 mr-4">
+                <span class="font-semibold text-gray-700 text-sm">자기소개서 및 수학 계획서</span>
+            </label>
+            <label class="flex items-center p-3 bg-white rounded-xl shadow-sm cursor-pointer border border-transparent hover:border-blue-200 transition-all">
+                <input type="checkbox" class="w-5 h-5 accent-blue-900 mr-4">
+                <span class="font-semibold text-gray-700 text-sm">교수 추천서 및 기타 실적</span>
+            </label>
+        </div>
+        <p class="mt-auto text-center text-xs text-blue-400 font-black tracking-widest uppercase">Capture this screen!</p>
+    </div>
+
+    <div class="card bg-deep-blue justify-center items-center text-center">
+        <img src="https://www.saraminimage.co.kr/pds/help_desk/live/2026/01/t8hezd81_8pn2-2so1qs_20260107155001.png" alt="KoMate Logo" class="logo-overlay">
+        <div class="mb-10 floating">
+            <svg xmlns="http://www.w3.org/2000/svg" width="72" height="72" viewBox="0 0 24 24" fill="none" stroke="#63B3ED" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+        </div>
+        
+        <p class="text-white mb-14 text-xl font-bold leading-tight">여러분의 빛나는 미래를 응원합니다.</p>
+        
+        <div class="w-full">
+            <div class="bg-blue-800/40 border-2 border-sky-400/30 py-7 px-2 rounded-3xl backdrop-blur-sm shadow-xl">
+                <p class="text-white text-[15px] font-bold whitespace-nowrap overflow-hidden">
+                    더 많은 정보는 <span class="text-sky-300 text-lg underline decoration-sky-400 underline-offset-4">KoMate</span>에서 확인하세요!
+                </p>
+                <div class="mt-5 flex justify-center space-x-1">
+                    <div class="w-2 h-2 rounded-full bg-sky-400 opacity-40"></div>
+                    <div class="w-2 h-2 rounded-full bg-sky-400 opacity-70"></div>
+                    <div class="w-2 h-2 rounded-full bg-sky-400"></div>
+                </div>
+            </div>
+        </div>
+        
+        <p class="mt-12 text-[10px] text-blue-300 uppercase tracking-[0.3em] font-bold">Empowering Global Students</p>
+    </div>
+
+</body>
+</html>
